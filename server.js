@@ -8,7 +8,7 @@ const pgClient = new Client({
   connectionString: 'postgresql://pandastore:SFRCIISIodcaSiqmq5mF16jvjlXb1MBR@dpg-d21s5tp5pdvs738b0ba0-a.oregon-postgres.render.com/pandastore_1ags',
   ssl: { rejectUnauthorized: false }
 });
-TELEGRAM_TOKEN="7380609755:AAFy6794LNWVAtzU_GA0kNp-IJ2zSdgDZWE"
+
 // الاتصال بقاعدة البيانات لمرة واحدة فقط
 pgClient.connect()
   .then(() => console.log("✅ تم الاتصال بقاعدة بيانات PostgreSQL بنجاح"))
@@ -25,6 +25,8 @@ const app = express();
 //   connectionString: process.env.DATABASE_URL,
 //   ssl: { rejectUnauthorized: false }
 // });
+
+// 5. الاتصال بقاعدة البيانا
 
 // ... باقي الكود كما هو ...
 
