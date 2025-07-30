@@ -5,7 +5,7 @@ require('dotenv').config(); // يمكن حذفه إذا كنت تستخدم Rend
 const { Client } = require('pg');
 const express = require('express');
 const pgClient = new Client({
-  connectionString: 'postgresql://pandastore:SFRCIISIodcaSiqmq5mF16jvjlXb1MBR@dpg-d21s5tp5pdvs738b0ba0-a.oregon-postgres.render.com/pandastore_1ags',
+  connectionString: 'postgresql://data_k7hh_user:a4rANFLml8luQBejgZ7nq4mDj2wvWWeT@dpg-d259o063jp1c73d43is0-a.oregon-postgres.render.com/data_k7hh',
   ssl: { rejectUnauthorized: false }
 });
 
