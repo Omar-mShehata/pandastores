@@ -77,7 +77,7 @@ const CHANNEL_ID = process.env.CHANNEL_ID;
 const allowedOrigins = [
   'https://pandastores.netlify.app',
   'https://panda-stores-mu.vercel.app',
-  'https://pandastores-q2fd.onrender.com'
+  'https://pandastore-f2yn.onrender.com'
 ];
 
 app.use((req, res, next) => {
@@ -762,7 +762,7 @@ app.post('/telegramWebhook', async (req, res) => {
     const helpMessage = "عرض قائمة الطلبات:";
     const replyMarkup = {
       inline_keyboard: [
-        [{ text: "DataBase🚀", web_app: { url: "https://pandastores-q2fd.onrender.com/admin.html" } }]
+        [{ text: "DataBase🚀", web_app: { url: "https://pandastore-f2yn.onrender.com/admin.html" } }]
       ]
     };
 
@@ -913,7 +913,7 @@ app.get("/", (req, res) => {
 
 const activateWebhook = async () => {
   try {
-    const botUrl = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/setWebhook?url=https://pandastores-q2fd.onrender.com/telegramWebhook`;
+    const botUrl = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/setWebhook?url=https://pandastore-f2yn.onrender.com/telegramWebhook`;
     const { data } = await axios.get(botUrl);
     console.log("✅ Webhook set successfully:", data);
   } catch (error) {
