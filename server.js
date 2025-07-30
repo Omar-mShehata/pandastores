@@ -9,6 +9,11 @@ const pgClient = new Client({
   ssl: { rejectUnauthorized: false }
 });
 
+// الاتصال بقاعدة البيانات لمرة واحدة فقط
+pgClient.connect()
+  .then(() => console.log("✅ تم الاتصال بقاعدة بيانات PostgreSQL بنجاح"))
+  .catch(err => console.error('❌ فشل الاتصال بقاعدة PostgreSQL:', err));
+
 const axios = require('axios');
 const bodyParser = require('body-parser');
 
