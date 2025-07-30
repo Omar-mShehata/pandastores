@@ -76,6 +76,7 @@ const CHANNEL_ID = process.env.CHANNEL_ID;
 
 const allowedOrigins = [
   'https://pandastores.netlify.app',
+  'https://pandastores.netlify.app/buy',
   'https://panda-stores-mu.vercel.app',
   'https://pandastore-f2yn.onrender.com'
 ];
