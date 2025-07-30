@@ -9,9 +9,6 @@ const pgClient = new Client({
   ssl: { rejectUnauthorized: false }
 });
 
-pgClient.connect()
-  .then(() => console.log("✅ تم الاتصال بقاعدة بيانات PostgreSQL بنجاح"))
-  .catch(err => console.error('❌ فشل الاتصال بقاعدة PostgreSQL:', err));
 const axios = require('axios');
 const bodyParser = require('body-parser');
 
@@ -23,11 +20,6 @@ const app = express();
 //   connectionString: process.env.DATABASE_URL,
 //   ssl: { rejectUnauthorized: false }
 // });
-
-// 5. الاتصال بقاعدة البيانات
-pgClient.connect()
-  .then(() => console.log("✅ تم الاتصال بقاعدة بيانات PostgreSQL بنجاح"))
-  .catch(err => console.error('❌ فشل الاتصال بقاعدة PostgreSQL:', err));
 
 // ... باقي الكود كما هو ...
 
