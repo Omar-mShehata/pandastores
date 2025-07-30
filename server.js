@@ -4,6 +4,14 @@ require('dotenv').config(); // يمكن حذفه إذا كنت تستخدم Rend
 // 2. استيراد المكتبات
 const { Client } = require('pg');
 const express = require('express');
+const pgClient = new Client({
+  connectionString: 'postgresql://pandastore:SFRCIISIodcaSiqmq5mF16jvjlXb1MBR@dpg-d21s5tp5pdvs738b0ba0-a.oregon-postgres.render.com/pandastore_1ags',
+  ssl: { rejectUnauthorized: false }
+});
+
+pgClient.connect()
+  .then(() => console.log("✅ تم الاتصال بقاعدة بيانات PostgreSQL بنجاح"))
+  .catch(err => console.error('❌ فشل الاتصال بقاعدة PostgreSQL:', err));
 const axios = require('axios');
 const bodyParser = require('body-parser');
 
@@ -11,10 +19,10 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // 4. إعداد الاتصال بقاعدة البيانات
-const pgClient = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
-});
+// const pgClient = new Client({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: { rejectUnauthorized: false }
+// });
 
 // 5. الاتصال بقاعدة البيانات
 pgClient.connect()
